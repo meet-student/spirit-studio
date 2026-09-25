@@ -1,0 +1,12 @@
+{
+  "title": "Settings",
+  "general": "General",
+  "storedInBrowser": "Stored in this browser.",
+  "language": {
+    "label": "Language",
+    "description": "Choose the language used by Studio.",
+    "zh": "中文",
+    "en": "English"
+  },
+  "connectionTitle": "Mastra Connection"
+}

@@ -1,0 +1,41 @@
+{
+  "appName": "Spirit Studio",
+  "search": "Search",
+  "searchAndNavigate": "Search and navigate",
+  "sidebar": "Sidebar",
+  "more": "More",
+  "openDetailsPanel": "Open details panel",
+  "breadcrumb": "Breadcrumb",
+  "theme": {
+    "label": "Theme",
+    "description": "Customize the appearance of the studio.",
+    "system": "System",
+    "light": "Light",
+    "dark": "Dark"
+  },
+  "actions": {
+    "configurationSaved": "Configuration saved",
+    "saveConfiguration": "Save Configuration",
+    "addHeader": "Add Header",
+    "addAnotherHeader": "Add Another Header",
+    "removeHeader": "Remove header"
+  },
+  "headers": {
+    "title": "Headers",
+    "none": "No header yet",
+    "name": "Name",
+    "namePlaceholder": "e.g. Authorization",
+    "value": "Value",
+    "valuePlaceholder": "e.g. Bearer <token>"
+  },
+  "connection": {
+    "instanceUrl": "Mastra instance URL",
+    "instanceUrlPlaceholder": "e.g: http://localhost:4111",
+    "apiPrefix": "API prefix",
+    "apiPrefixPlaceholder": "e.g: /api (default)",
+    "description": "Configure the Mastra instance URL, API prefix, and request headers used by the studio."
+  },
+  "errors": {
+    "failedToLoad": "Failed to load {{resource}}"
+  }
+}

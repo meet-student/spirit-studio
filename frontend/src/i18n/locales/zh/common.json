@@ -1,0 +1,41 @@
+{
+  "appName": "Spirit Studio",
+  "search": "搜索",
+  "searchAndNavigate": "搜索并导航",
+  "sidebar": "侧边栏",
+  "more": "更多",
+  "openDetailsPanel": "打开详情面板",
+  "breadcrumb": "面包屑",
+  "theme": {
+    "label": "主题",
+    "description": "自定义 Studio 的显示外观。",
+    "system": "跟随系统",
+    "light": "浅色",
+    "dark": "深色"
+  },
+  "actions": {
+    "configurationSaved": "配置已保存",
+    "saveConfiguration": "保存配置",
+    "addHeader": "添加请求头",
+    "addAnotherHeader": "添加另一个请求头",
+    "removeHeader": "移除请求头"
+  },
+  "headers": {
+    "title": "请求头",
+    "none": "暂无请求头",
+    "name": "名称",
+    "namePlaceholder": "例如：Authorization",
+    "value": "值",
+    "valuePlaceholder": "例如：Bearer <token>"
+  },
+  "connection": {
+    "instanceUrl": "Mastra 实例地址",
+    "instanceUrlPlaceholder": "例如：http://localhost:4111",
+    "apiPrefix": "API 前缀",
+    "apiPrefixPlaceholder": "例如：/api（默认）",
+    "description": "配置 Studio 使用的 Mastra 实例地址、API 前缀和请求头。"
+  },
+  "errors": {
+    "failedToLoad": "加载{{resource}}失败"
+  }
+}

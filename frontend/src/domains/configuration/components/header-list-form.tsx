@@ -1,0 +1,94 @@
+import { Button } from '@mastra/playground-ui/components/Button';
+import { TextFieldBlock } from '@mastra/playground-ui/components/FormFieldBlocks';
+import { Txt } from '@mastra/playground-ui/components/Txt';
+import { Plus, Trash } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
+import { useId } from 'react';
+
+export type HeaderListFormItem = {
+  name: string;
+  value: string;
+};
+
+export interface HeaderListFormProps {
+  headers: Array<HeaderListFormItem>;
+  showHeading?: boolean;
+  onAddHeader: (header: HeaderListFormItem) => void;
+  onRemoveHeader: (index: number) => void;
+}
+
+export const HeaderListForm = ({ headers, onAddHeader, onRemoveHeader, showHeading = true }: HeaderListFormProps) => {
+  const { t } = useTranslation('common');
+
+  return (
+    <div className="space-y-4">
+      {showHeading && (
+        <Txt as="h2" variant="body" tone="ink">
+          {t('headers.title')}
+        </Txt>
+      )}
+
+      <div className="space-y-6">
+        {headers.length > 0 && (
+          <ul className="space-y-4">
+            {headers.map((header, index) => (
+              <li key={index}>
+                <HeaderListFormItem index={index} header={header} onRemove={() => onRemoveHeader(index)} />
+              </li>
+            ))}
+          </ul>
+        )}
+
+        <div className="flex items-center justify-between gap-2">
+          {headers.length === 0 && <Txt tone="muted">{t('headers.none')}</Txt>}
+          <Button
+            type="button"
+            onClick={() => onAddHeader({ name: '', value: '' })}
+            size={headers.length === 0 ? 'md' : 'sm'}
+            icon={<Plus />}
+          >
+            {headers.length === 0 ? t('actions.addHeader') : t('actions.addAnotherHeader')}
+          </Button>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+interface HeaderListFormItemProps {
+  header: HeaderListFormItem;
+  index: number;
+  onRemove: () => void;
+}
+
+const HeaderListFormItem = ({ index, header, onRemove }: HeaderListFormItemProps) => {
+  const { t } = useTranslation('common');
+  const nameId = useId();
+  const valueId = useId();
+
+  return (
+    <div className="grid grid-cols-[1fr_1fr_auto] items-end gap-4">
+      <TextFieldBlock
+        id={nameId}
+        name={`headers.${index}.name`}
+        label={t('headers.name')}
+        placeholder={t('headers.namePlaceholder')}
+        required
+        defaultValue={header.name}
+      />
+
+      <TextFieldBlock
+        id={valueId}
+        name={`headers.${index}.value`}
+        label={t('headers.value')}
+        placeholder={t('headers.valuePlaceholder')}
+        required
+        defaultValue={header.value}
+      />
+
+      <Button type="button" onClick={onRemove} aria-label={t('actions.removeHeader')} tooltip={t('actions.removeHeader')}>
+        <Trash />
+      </Button>
+    </div>
+  );
+};

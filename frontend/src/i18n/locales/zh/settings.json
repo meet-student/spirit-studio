@@ -1,0 +1,12 @@
+{
+  "title": "设置",
+  "general": "通用",
+  "storedInBrowser": "保存在当前浏览器中。",
+  "language": {
+    "label": "语言",
+    "description": "选择 Studio 使用的语言。",
+    "zh": "中文",
+    "en": "English"
+  },
+  "connectionTitle": "Mastra 连接"
+}
