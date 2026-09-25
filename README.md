@@ -12,7 +12,7 @@ drama-agent :7818/internal/mastra
 
 ## 启动
 
-先在同级业务项目启动 `drama-agent`，确认 `http://127.0.0.1:7818/health` 可访问，然后在本目录运行：
+先在同级业务项目启动 `agent`，确认 `http://127.0.0.1:7818/health` 可访问，然后在本目录运行：
 
 ```bash
 pnpm install
@@ -44,8 +44,8 @@ pnpm dev:web  # 官方 Studio 前端 :7337
 ```dotenv
 PORT=7337
 MASTRA_PROXY_PORT=4111
-DRAMA_AGENT_ROOT=../drama-agent
-DRAMA_AGENT_API_URL=http://127.0.0.1:7818
+AGENT_ROOT=../agent
+AGENT_API_URL=http://127.0.0.1:7818
 APP_ENV=local
 ```
 
